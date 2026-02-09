@@ -1,1 +1,182 @@
+/* App.css */
+
+/* Basic reset-ish */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Landing page background image */
+.landing {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Background image requirement */
+  background-image: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=2400&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 2rem;
+}
+
+.landingCard {
+  width: min(900px, 95vw);
+  padding: 2rem;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.landingHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btnPrimary:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 10;
+}
+
+.navLinks {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #111;
+  font-weight: 600;
+}
+
+.navBrand {
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+/* Product grid */
+.categoryTitle {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.thumb {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #eee;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.price {
+  font-weight: 800;
+}
+
+.btnRow {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btnSmall {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btnDanger {
+  border: none;
+  background: #ffebee;
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.cartSummary {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.muted {
+  color: #555;
+}
 
